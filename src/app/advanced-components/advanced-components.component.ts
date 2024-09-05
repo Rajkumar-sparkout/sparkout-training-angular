@@ -6,11 +6,12 @@ import { LifecycleHooksComponent } from '../lifecycle-hooks/lifecycle-hooks.comp
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ChangeEventComponent } from '../change-event/change-event.component';
 import { DirectivesComponent } from '../directives/directives.component';
+import { ParentNewComponent } from '../parent-new/parent-new.component';
 
 @Component({
   selector: 'app-advanced-components',
   standalone: true,
-  imports: [RouterComponent, CommonModule, AppHoverDirective, LifecycleHooksComponent],
+  imports: [RouterComponent, CommonModule, AppHoverDirective, LifecycleHooksComponent, ParentNewComponent],
   templateUrl: './advanced-components.component.html',
   styleUrl: './advanced-components.component.css'
 })

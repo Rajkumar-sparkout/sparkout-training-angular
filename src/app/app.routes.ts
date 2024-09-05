@@ -14,6 +14,7 @@ import { LogicalComponent } from './logical/logical.component';
 import { AdvancedComponentsComponent } from './advanced-components/advanced-components.component';
 import { DefferableViewComponent } from './defferable-view/defferable-view.component';
 import { SignalsComponent } from './signals/signals.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 export const routes: Routes = [
     { path: "", redirectTo: "binding", pathMatch: "full" },
@@ -57,4 +58,5 @@ export const routes: Routes = [
     { path: "ng-related", component: AdvancedComponentsComponent},
     { path: "defer", component: DefferableViewComponent},
     { path: "signals", component: SignalsComponent},
+    { path: "pipe", component: PipeComponent},
 ];
