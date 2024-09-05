@@ -1,0 +1,9 @@
+.container.VALID{
+    border: green 2px solid;
+}
+.container.INVALID{
+    border: red 2px solid;
+}
+.container.PENDING{
+    border: orange 2px solid;
+}

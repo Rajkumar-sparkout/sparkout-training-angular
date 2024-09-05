@@ -1,0 +1,44 @@
+<div class="card w-50 mx-auto mt-5">
+    <div class="container">
+        <form class="py-3" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+            <h6 class="mt-4">Employee Details</h6>
+            <div class="d-flex">
+                <div class="row g-3">
+                    <div class="col">
+                      <!-- Name input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example1">First name</label>
+                        <input type="text" formControlName="firstName" id="form9Example1" class="form-control"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Email input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example2">Last name</label>
+                        <input type="text" formControlName="lastName" id="form9Example2" class="form-control" />
+                      </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary ms-2 mt-2">Remove</button>
+                </div>
+            </div>
+                
+              <!-- <div class="row g-5">
+                <div class="col">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example3">Quantity</label>
+                    <input type="number" name="quantity" formControlName="quantity" id="form9Example3" class="form-control" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example4">Price</label>
+                    <input type="number" name="price" formControlName="price" id="form9Example4" class="form-control" />
+                  </div>
+                </div>
+              </div> -->
+              <button type="submit" class="btn btn-primary mt-2">Add skill</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="card w-50 ms-5 mt-5">
+    <div class="container">
+        <form action="" class="py-3" (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <!-- <form action="" class="py-3" (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" > -->
+            <div class="row g-5">
+                <div class="col">
+                  <!-- Name input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example1">First name</label>
+                    <input type="text" name="firstName" id="firstName" class="form-control"  />
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Email input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example2">Last name</label>
+                    <input type="text" name="lastName" id="lastName" class="form-control" ngModel required/>
+                  </div>
+                </div>
+              </div>
+                <div class="form-group" ngModelGroup="details">
+                  <div class="row g-5">
+                    <div class="col">
+                      <!-- Name input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example3">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" ngModel required #email="ngModel"/>
+                        <span class="help-block" *ngIf="email.touched && email.invalid">Please enter a valid email</span>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Email input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example4">Mobile number</label>
+                        <input type="text" name="mobileNumber" id="mobileNumber" class="form-control" ngModel />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="row g-5">
+                <div class="col">
+                    <label class="form-label" for="form9Example1">Country</label>
+                    <select class="form-select" aria-label="Default select example" name="country" id="country" ngModel>
+                        @for(country of countries; track country){
+                            <option >{{country.countryName}}</option>
+                        }
+                      </select>
+                </div>
+                <div class="col flex">
+                    <label class="form-label" for="form9Example4">Gender:</label>&nbsp;&nbsp;
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" name="gender" id="gender" value="option1" ngModel>
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" name="gender" id="gender" value="option2" ngModel>
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                      </div>
+                </div>
+              </div>
+              <button class="btn btn-primary mt-2">submit</button>
+              <button class="btn btn-primary mt-2" (click)="setDefaultValue()">Set value</button>
+        </form>
+    </div>
+</div>
+
+

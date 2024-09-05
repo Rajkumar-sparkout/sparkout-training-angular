@@ -1,0 +1,51 @@
+<h3 class="mt-2">Structural Directives</h3>
+<h6 class="mt-2">If else</h6>
+@if(a>b){
+    {{a}} is greater than {{b}}
+}@else{
+    {{b}} is greater than {{a}}
+}
+
+<h6 class="mt-4">For loop</h6>
+@for(item of items; track item){
+    <div>{{item}}</div>
+}
+
+<h6 class="mt-4">Switch</h6>
+@switch(userRloe){
+    @case("admin"){
+        <p>User is admin</p>
+    }
+    @case("manager"){
+        <p>User is manager</p>
+    }
+    @default{
+        <p>User is default user</p>
+    }
+}
+
+<h3 class="mt-4">Attribute Directives</h3>
+
+<h6 class="mt-4">ngClass</h6>
+<div class="my-2" [ngClass]="{'active': isActive, 'inactive': !isActive}">This is a section to show/hide when button clicked</div>
+<button class="btn btn-primary" (click)=" toggleActive()">Toggle Active</button>
+
+<h6 class="mt-4">ngStyle</h6>
+<div class="my-2" [ngStyle]="{'background-color':backgroundColor, 'font-size.px':fontSize}">
+    Update a style property using attribute directive
+</div>
+<button class="btn btn-warning" (click)="updateStyles()">Style update</button>
+
+<h6 class="mt-4">ngStyle</h6>
+<div>
+    <input type="text" [(ngModel)]="name">
+</div>
+<p>Hello {{name}}</p>
+
+<!-- <h3 class="mt-4">Custome Directives</h3> -->
+
+<!-- Custome directives are classes to add custome behaviour / functionality to elements -->
+
+<h3 class="mt-4">Custom Directive</h3>
+<p appHighlight highLightColor="lightgreen">Hello world from abc tutorials</p>
+<p appHighlight>Hello world from abc tutorials</p>

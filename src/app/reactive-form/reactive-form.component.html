@@ -1,0 +1,120 @@
+<div class="card w-50 mx-auto mt-5">
+    <div class="container" [ngClass]="formStatus">
+        <form action="" class="py-3" [formGroup]="register" (ngSubmit)="onSubmit()">
+            <h6 class="mt-4">Personal Details</h6>
+            <div class="row g-5">
+                <div class="col">
+                  <!-- Name input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example1">First name</label>
+                    <input type="text" name="firstName" formControlName="firstName" id="form9Example1" class="form-control"/>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Email input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example2">Last name</label>
+                    <input type="text" name="lastName" formControlName="lastName" id="form9Example2" class="form-control" />
+                  </div>
+                </div>
+              </div>
+                
+              <div class="row g-5">
+                <div class="col">
+                  <!-- Name input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example3">Email</label>
+                    <input type="email" name="email" formControlName="email" id="form9Example3" class="form-control" />
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Email input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example4">Mobile number</label>
+                    <input type="number" name="mobileNumber" formControlName="mobileNumber" id="form9Example4" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row g-5">
+                <div class="col">
+                  <!-- Name input -->
+                  <!-- Name input -->
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="form9Example1">User Name</label>
+                    <input type="text" name="userName" formControlName="userName" id="form9Example1" class="form-control"/>
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="mt-4">Address</h6>
+              <div class="formGroup" formGroupName="address">
+                <div class="row g-5">
+                    <div class="col">
+                      <!-- Name input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example3">Street</label>
+                        <input type="text" name="street" formControlName="street" id="form9Example3" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Email input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example4">Country</label>
+                        <input type="text" name="country" formControlName="country" id="form9Example4" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row g-5">
+                    <div class="col">
+                      <!-- Name input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example3">City</label>
+                        <input type="text" name="city" formControlName="city" id="form9Example3" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Email input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example4">Zipcode</label>
+                        <input type="number" name="zipcode" formControlName="zipcode" id="form9Example4" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <h6 class="mt-4">Skill</h6>
+              <div class="formGroup" formArrayName="skills">
+                <div class="row g-5">
+                    <div class="col">
+                      <!-- Name input -->
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form9Example3">Add skill</label>
+                        <!-- <input type="text" id="form9Example3" class="form-control" 
+                        *ngFor="let control of registerFormControl.skills; let i =index" [formControlName]="i"/> -->
+                        <!-- <input type="text" id="form9Example3" class="form-control" 
+                        *ngFor="let control of register.get('skills')['controls']; let i =index" [formControlName]="1"/> -->
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-2" (click)="generateUserName()">submit</button>
+        </form>
+        <p>{{userName}}</p>
+    </div>
+</div>
+
+
+
+
+<!-- form array is way to manage a collection of form controls in angular. The form control can be formgroup, formcontrol or another
+form array
+
+In angular group form conntrols in two ways
+.using formgroup
+.using formarray
+
+difference 
+.formgroup store the formcontrols in the form of key value pair in an object
+.formarray store the formcontrols as an element of an array -->

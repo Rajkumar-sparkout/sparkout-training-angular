@@ -1,0 +1,13 @@
+<h5 class="mt-2">Signals</h5>
+
+<div class="counter-container">
+    <button class="me-3" (click)="decrement()"> - </button>
+    <span>{{counter()}}</span>
+    <button class="ms-3" (click)="increment()"> + </button>
+</div>
+
+<div class="class-container">
+    <div class="task-item" *ngFor="let msg of message()">
+        <p>{{msg}}</p>
+    </div>
+</div>

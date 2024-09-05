@@ -1,0 +1,91 @@
+<h5>ng-content</h5>
+<div class="more-products">
+    <div class="row">
+        <div class="col-md-6 col-lg-3">
+            <app-router>
+                <h5 class="card-title">New in phone</h5>
+                <a href="#" class="btn btn-primary">iphone</a>
+            </app-router>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <app-router>
+                <h5 class="card-title">New in samsung</h5>
+                <a href="#" class="btn btn-primary">samsung</a>
+            </app-router>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <app-router>
+                <h5 class="card-title">New in one plus</h5>
+                <a href="#" class="btn btn-primary">One plus</a>
+            </app-router>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <app-router>
+                <h5 class="card-title">New in MI</h5>
+                <a href="#" class="btn btn-primary">MI</a>
+            </app-router>
+        </div>
+    </div>
+</div>
+
+<h5 class="mt-5">Template reference variable</h5>
+<div class="ecart-search-variable">
+    <input type="text" class="ecart-search-product" #searchInput>
+    <button class="btn btn-search bg-primary text-white" (click)="updatesearchtext(searchInput)">search</button>
+    <p> <strong>Search result for: {{searchText}}</strong> </p>
+</div>
+
+<h5 class="mt-5">ng-container</h5>
+<ng-container *ngIf="toggle; else toggleOff">
+    <p>Toggle is on.</p>
+</ng-container>
+<ng-template #toggleOff>
+    <p>Toggle is off.</p>
+</ng-template>
+<button class="btn btn-search bg-primary text-white" (click)="onToggele()">search</button>
+
+<!-- <ng-container *ngIf="toggle" *ngFor="let name of names">
+    <p>{{names}}</p>
+</ng-container> -->
+
+<h5 class="mt-5">ng-template</h5>
+<ng-template #myTemplate>
+    <h6>This is a template</h6>
+    <p>This is a example paragraph to understand ng-template</p>
+</ng-template>
+<div *ngTemplateOutlet="myTemplate"></div>
+
+<h5 class="mt-5">HostBinding and HostListener</h5>
+<button class="btn" appHover>search</button>
+
+<h5 class="mt-5">ViewChild</h5>
+<input type="text" class="ecart-search-product" #searchIn>
+<button class="btn btn-search bg-primary text-white" (click)="updatesearchtxt()">search</button>
+<p> <strong>Search result for: {{searchTxt}}</strong> </p>
+
+<h5 class="mt-5">ViewChildren</h5>
+<div class="mt-2">
+    <input type="text" placeholder="fName" class="ecart-search-product" #inputEl>
+</div>
+<div class="mt-2">
+    <input type="text" placeholder="lName" class="ecart-search-product" #inputEl>
+</div>
+<div class="mt-2">
+    <input type="text" placeholder="email" class="ecart-search-product" #inputEl>
+</div>
+<div class="mt-2">
+    <button class="btn bg-primary text-white" (click)="show()">Show</button>
+</div>
+<div class="mt-1">
+    <p>Full name is: {{fullName}}</p>
+</div>
+
+<h5 class="mt-5">Renderer2</h5>
+<button class="btn text-white" appHover (click)="show()">Show</button>
+
+<h5 class="mt-5">Life Cycle hooks parent</h5>
+<div class="container">
+    <input type="text" #inputElem>
+    <button (click)="onButtonClicked(inputElem)">Submit</button>
+    <app-lifecycle-hooks [message]="inputVal"></app-lifecycle-hooks>
+</div>

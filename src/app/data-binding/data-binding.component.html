@@ -1,0 +1,25 @@
+<h3>Data Bindings</h3>
+<!-- string interpolation -->
+<h6>String interpolation</h6>
+<p>{{"server"}} with ID {{serverId}} is {{getServerStatus()}}</p>
+
+<!-- property binding -->
+<h6 class="mt-4">Property & Event binding</h6>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+<!-- <p [innerText]="allowNewServer"></p> -->
+ <p>{{serverCreationStatus}}</p>
+
+ <!-- Two way binding -->
+ <h6 class="mt-4">Two way binding</h6>
+
+ <p>Here Using input event</p>
+ <input type="text" class="form-control w-25 mb-3" (input)="onUpdateServerName($event)">
+
+ <p>Here Using ngModel two way</p>
+  <input type="text" class="form-control w-25" [(ngModel)]="serverName">
+  <p>{{serverName}}</p>
+
+
+  <h3 class="mt-5">Property decorators</h3>
+<h6 class="mt-3">Parent to child</h6>
+<app-parent></app-parent>

@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" [routerLink]="['binding']">Data binding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="changeEvent">change Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="directives">Directives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Forms
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" routerLink="template-driven">Template driven form</a></li>
+              <li><a class="dropdown-item" routerLink="reactive-form">Reactive form</a></li>
+              <li><a class="dropdown-item" routerLink="typed-form">Typed Form</a></li>
+              <li><a class="dropdown-item" routerLink="neated-form-array">Nested Form Array</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Router
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" routerLink="product/2">Activted route</a></li>
+              <li><a class="dropdown-item" routerLink="product/2" [queryParams]="{ category: 'one'}">Ouery param</a></li>
+              <li><a class="dropdown-item" routerLink="#"></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" [routerLink]="['error-handling']">Error handling</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Observables
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" routerLink="rxjs-operator">Rxjs operators</a></li>
+              <!-- <li><a class="dropdown-item" routerLink="reactive-form">Reactive form</a></li>
+              <li><a class="dropdown-item" routerLink="typed-form">Typed Form</a></li>
+              <li><a class="dropdown-item" routerLink="neated-form-array">Nested Form Array</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="logical">Logics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="ng-related">Advanced comp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="defer">Defferable</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="signals">Signals</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

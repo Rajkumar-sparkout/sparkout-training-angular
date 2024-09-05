@@ -1,0 +1,59 @@
+<h5 class="mt-5">Defferable Views</h5>
+
+<app-box-one></app-box-one>
+<app-box-two #two></app-box-two>
+<app-box-three></app-box-three>
+<app-box-four></app-box-four>
+
+<!-- @defer (on idle) is default method -->
+<!-- @defer(){
+   <app-box-five></app-box-five>
+} -->
+
+<!-- component is loaded after 3 sec -->
+<!-- @defer(on timer(3s)){
+   <app-box-five></app-box-five>
+} -->
+
+<!-- component is loaded when click above that component & interaction needs placeholder directive -->
+<!-- @defer(on interaction){
+   <app-box-five></app-box-five>
+} @placeholder{
+   <app-dashboard></app-dashboard>
+} -->
+
+<!-- Box fiveive component is loaded when click box two component refernce var -->
+<!-- @defer(on interaction(two)){ -->
+
+<!-- Box five component is loaded when hover -->
+<!-- @defer(on hover){ -->
+
+<!-- Box five component is loaded immediate -->
+<!-- @defer(on immediate){ -->
+
+<!-- Box five component is loaded when scroll -->
+<!-- @defer(on viewport){ -->
+
+<!-- Box five component is loaded when after 5 sec & when hover -->
+<!-- @defer(on timer(5s); on hover){ -->
+
+<!-- Box five component is loaded when button is click -->
+<!-- @defer(when isVisible){ -->
+
+<!-- Box five component is loaded when click above dashboard & after 5sec -->
+@defer(on interaction; prefetch on timer(5s)){
+
+<!-- loaeding -->
+<!-- @defer(){ -->
+   <app-box-five></app-box-five>
+} @placeholder{
+   <app-dashboard></app-dashboard>
+} 
+<!-- @loading(after 1s; minimum 5s){
+   <app-logical></app-logical>
+} -->
+<!-- @error{
+   <app-router></app-router>
+} -->
+
+ <button class="btn btn-primary mt-5" (click)="show()">Show</button>
