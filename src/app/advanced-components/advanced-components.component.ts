@@ -7,18 +7,19 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ChangeEventComponent } from '../change-event/change-event.component';
 import { DirectivesComponent } from '../directives/directives.component';
 import { ParentNewComponent } from '../parent-new/parent-new.component';
+import { CustomDirective } from '../directive/custom.directive';
 
 @Component({
   selector: 'app-advanced-components',
   standalone: true,
-  imports: [RouterComponent, CommonModule, AppHoverDirective, LifecycleHooksComponent, ParentNewComponent],
+  imports: [RouterComponent, CommonModule, AppHoverDirective, LifecycleHooksComponent, ParentNewComponent, CustomDirective],
   templateUrl: './advanced-components.component.html',
   styleUrl: './advanced-components.component.css'
 })
 export class AdvancedComponentsComponent implements OnInit{
 
   constructor(){
-    console.log("Parent advanced component is called");
+    // console.log("Parent advanced component is called");
   }
 
   ngOnInit(): void {
@@ -81,6 +82,11 @@ export class AdvancedComponentsComponent implements OnInit{
     onButtonClicked(inputEl: HTMLInputElement){
       this.inputVal = inputEl.value;
       // this.inputVal.push(inputEl.value);
+    }
+
+    toDestroy: boolean = false;
+    DestroyComponent(){
+      this.toDestroy = !this.toDestroy;
     }
 
 }

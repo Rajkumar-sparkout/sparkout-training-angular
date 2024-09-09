@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule, FormArray } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
-import { log } from 'console';
+import { CustomValidators } from '../validators/noSpaceAllowed.validator';
 
 @Component({
   selector: 'app-reactive-form',
@@ -54,8 +54,8 @@ export class ReactiveFormComponent implements OnInit {
 
 
   register = new FormGroup({
-      firstName : new FormControl("", Validators.required),
-      lastName : new FormControl("", Validators.required),
+      firstName : new FormControl("", [Validators.required, CustomValidators.noSpaceAllowed]),
+      lastName : new FormControl("", [Validators.required, CustomValidators.noSpaceAllowed]),
       email : new FormControl("", [Validators.required,Validators.email]),
       mobileNumber : new FormControl("", [
         Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$'),
@@ -80,6 +80,10 @@ export class ReactiveFormComponent implements OnInit {
 
   get registerFormControl() {
     return this.register.controls['skills'] as FormArray;
+  }
+
+  get registerControl() {
+    return this.register.controls;
   }
 
   public fname: any;
@@ -141,6 +145,7 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   onSubmit(){    
+    console.log(this.register);
   }
 
 }

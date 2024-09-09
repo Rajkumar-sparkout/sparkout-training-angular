@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
-  name: string = 'Vijay';
+  // name: string = 'Vijay';
+  @Input() name: string = '';
 
 }

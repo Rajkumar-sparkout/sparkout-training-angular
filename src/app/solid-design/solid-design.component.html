@@ -1,0 +1,8 @@
+<div class="my-5 mx-5">
+    <h5 class="mb-4">Solid principles</h5>
+    <!-- L - Liskov Substitution Principle(LSP) -->
+    <ng-container *ngFor="let bankType of bankTypes">
+        <button class="btn btn-primary" (click)="getInterest(bankType)">{{bankType}}</button>
+    </ng-container>
+    <p>see in console</p> 
+</div>

@@ -8,6 +8,9 @@
                   <div data-mdb-input-init class="form-outline">
                     <label class="form-label" for="form9Example1">First name</label>
                     <input type="text" name="firstName" formControlName="firstName" id="form9Example1" class="form-control"/>
+                    <!-- <small *ngIf="registerControl.firstName.invalid && registerControl.firstName.touched">First name is required</small> -->
+                    <small class="text-danger" *ngIf="registerControl.firstName.errors?.['required'] && registerControl.firstName.touched">First name is required</small>
+                    <small class="text-danger" *ngIf="registerControl.firstName.errors?.['noSpaceAllowed'] && registerControl.firstName.touched">No space is allowed in first name</small>
                   </div>
                 </div>
                 <div class="col">
@@ -15,6 +18,8 @@
                   <div data-mdb-input-init class="form-outline">
                     <label class="form-label" for="form9Example2">Last name</label>
                     <input type="text" name="lastName" formControlName="lastName" id="form9Example2" class="form-control" />
+                    <small class="text-danger" *ngIf="registerControl.lastName.errors?.['required'] && registerControl.lastName.touched">Last name is required</small>
+                    <small class="text-danger" *ngIf="registerControl.lastName.errors?.['noSpaceAllowed'] && registerControl.lastName.touched">No space is allowed in last name</small>
                   </div>
                 </div>
               </div>

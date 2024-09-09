@@ -15,6 +15,7 @@ import { AdvancedComponentsComponent } from './advanced-components/advanced-comp
 import { DefferableViewComponent } from './defferable-view/defferable-view.component';
 import { SignalsComponent } from './signals/signals.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { SolidDesignComponent } from './solid-design/solid-design.component';
 
 export const routes: Routes = [
     { path: "", redirectTo: "binding", pathMatch: "full" },
@@ -59,4 +60,5 @@ export const routes: Routes = [
     { path: "defer", component: DefferableViewComponent},
     { path: "signals", component: SignalsComponent},
     { path: "pipe", component: PipeComponent},
+    { path: "solid-principles", component: SolidDesignComponent},
 ];
