@@ -27,7 +27,8 @@ export class SignalsComponent implements OnInit{
   }
 
   decrement(){
-    this.counter.set(this.counter() - 1);
+    // this.counter.set(this.counter() - 1);
+    this.counter.update((prevValue)=> prevValue - 1);
     // this.message.mutate((prevMessage:any)=> prevMessage.pop())  
   }
 }

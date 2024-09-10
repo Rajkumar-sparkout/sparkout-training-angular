@@ -16,6 +16,7 @@ import { DefferableViewComponent } from './defferable-view/defferable-view.compo
 import { SignalsComponent } from './signals/signals.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SolidDesignComponent } from './solid-design/solid-design.component';
+import { ObservableComponent } from './rxjs-operators/observable/observable.component';
 
 export const routes: Routes = [
     { path: "", redirectTo: "binding", pathMatch: "full" },
@@ -54,6 +55,7 @@ export const routes: Routes = [
             ogTitle: 'Description of Error handling Component for social media',
           } 
     },
+    { path: "observables", component: ObservableComponent},
     { path: "rxjs-operator", component: RxjsOperatorsComponent},
     { path: "logical", component: LogicalComponent},
     { path: "ng-related", component: AdvancedComponentsComponent},

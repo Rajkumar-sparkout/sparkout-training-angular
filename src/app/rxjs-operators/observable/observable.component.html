@@ -1,0 +1,7 @@
+<div class="container mt-5 mx-5">
+    <h5>Observable</h5>
+    <div class="data-list" *ngFor="let x of data">
+        {{x}}
+    </div>
+    <button class="btn btn-danger mt-4" (click)=" getAsyncData()">Get data</button>
+</div>
