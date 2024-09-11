@@ -14,7 +14,7 @@
     <button class="btn btn-primary mt-2" #createBtn>Create new item</button>
 </div>
 
-<div class="container mt-4 mx-3">
+<div class="container mt-5 mx-3">
     <h6>Map & filter Operator</h6>
     <div class="data-list" *ngFor="let x of transformData">
         {{x}}
@@ -22,13 +22,75 @@
     <button class="btn btn-primary mt-4" (click)="getMapAndFilter()">Get data</button>
 </div>
 
-<div class="container mt-4 mx-3">
-    <h6>mergeMap</h6>
+<div class="container mt-5 mx-3">
+    <h6>mergeMap concatMap switchMap exhaustMap</h6>
     <!-- <div class="data-list" *ngFor="let x of transformData">
         {{x}}
     </div> -->
     <form [formGroup]="searchForm">
         <input class="form-control w-25" list="browsers" formControlName="search" placeholder="search..."/>
+        <p>See in console...</p>
     </form>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>take takeLast takeWhile operators</h6>
+    <div class="data-list" *ngFor="let data of takeData">
+        {{data}}
+    </div>
+    <button class="btn btn-primary mt-3" (click)="onTake()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>first last and single operators</h6>
+    <div class="data-list" *ngFor="let data of firstLastData">
+        {{data}}
+    </div>
+    <button class="btn btn-primary mt-3" (click)="onFirstLast()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>skip skipLast skipWhile operators</h6>
+    <div class="data-list" *ngFor="let data of skipData">
+        {{data}}
+    </div>
+    <button class="btn btn-primary mt-3" (click)="onSkip()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>Transformation scan operator</h6>
+    <div class="data-list" *ngFor="let data of scanData">
+        {{data}}
+    </div>
+    <button class="btn btn-primary mt-3" (click)="onScan()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>Transformation reduce operator</h6>
+    <div class="data-list" *ngFor="let data of reduceData">
+        {{data}}
+    </div>
+    <button class="btn btn-primary mt-3" (click)="onReduce()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>delay operator</h6>
+    <p>Data will print after one seconds. Becoz given delay condition two seconds</p>
+    <div class="data-list" *ngFor="let data of delayData">
+        {{data}}
+    </div>
+    <button class="btn btn-primary mt-3" (click)="onDelay()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>retry operator</h6>
+    <p>see in console...</p>
+    <button class="btn btn-primary mt-3" (click)="onRetry()">Get data</button>
+</div>
+
+<div class="container mt-5 mx-3">
+    <h6>retryWhen operator</h6>
+    <p>see in console...</p>
+    <button class="btn btn-primary mt-3" (click)="onRetryWhen()">Get data</button>
 </div>
 
